@@ -1,0 +1,34 @@
+package com.operationsmanagement.workshop.backend.application.payment.service;
+
+import com.operationsmanagement.workshop.backend.application.commons.dto.CustomerRequestDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.CreatePaymentRequestRequestDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.CreatePaymentRequestResponseDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.GetPaymentRequestDetailsRequestDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.GetPaymentRequestDetailsResponseDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.PaymentsReportRequestDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.PaymentsReportResponseDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.PendingPaymentRequestsReportRequestDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.PendingPaymentRequestsReportResponseDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.ProcessPaymentsResponseDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.SendPaymentRequestDTO;
+import com.operationsmanagement.workshop.backend.application.payment.dto.SendPaymentResponseDTO;
+import com.operationsmanagement.workshop.backend.system.exception.BusinessException;
+
+public interface PaymentService {
+
+	public CreatePaymentRequestResponseDTO createPaymentRequest(CreatePaymentRequestRequestDTO createPaymentRequestDTO) throws BusinessException;
+
+	public ProcessPaymentsResponseDTO processPayments(CustomerRequestDTO processPaymentsDTO);
+
+	public PaymentsReportResponseDTO paymentsReport(PaymentsReportRequestDTO paymentsReportDTO) throws BusinessException;
+
+	public PendingPaymentRequestsReportResponseDTO pendingPaymentRequestsReport(
+			PendingPaymentRequestsReportRequestDTO pendingPaymentRequestsReportDTO);
+
+	public GetPaymentRequestDetailsResponseDTO getPaymentRequestDetails(
+			GetPaymentRequestDetailsRequestDTO getPaymentRequestDetailsDTO);
+
+	public SendPaymentResponseDTO sendPayment(SendPaymentRequestDTO sendPaymentDTO) throws BusinessException;
+
+	
+}
