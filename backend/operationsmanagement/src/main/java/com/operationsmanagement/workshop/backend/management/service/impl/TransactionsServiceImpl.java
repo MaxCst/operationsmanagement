@@ -23,8 +23,6 @@ public class TransactionsServiceImpl implements TransactionsService {
 	@Override
 	@Transactional(readOnly = false)
 	public Transaction createTransaction(Transaction transaction) {
-		transaction.setId(null);
-		transaction.setActive(true);
 		return transactionDAO.save(transaction);
 	}
 

@@ -10,7 +10,7 @@ import com.operationsmanagement.workshop.backend.system.model.User;
 
 public interface TransactionsService {
 
-	// Transactions
+	// Transactions CRUD Services
 
 	public Transaction createTransaction(Transaction transaction);
 
@@ -22,7 +22,7 @@ public interface TransactionsService {
 
 	public List<Transaction> findAllTransactions();
 
-	// View Services
+	// View Support Services 
 
 	public List<Transaction> findTransactionsByDateRange(Operation operationType, Date startDate, Date endDate);
 

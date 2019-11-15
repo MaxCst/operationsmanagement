@@ -10,7 +10,7 @@ import com.operationsmanagement.workshop.backend.system.exception.BusinessExcept
 
 public interface OperationsService {
 
-	// Operations
+	// Operations CRUD services
 
 	public Operation createOperation(Operation operation);
 
@@ -24,9 +24,9 @@ public interface OperationsService {
 
 	public List<Operation> findAllOperations();
 
-	// Operation services
+	// Operation Domain Services
 
-	public void checkOperationType(Long paymentId, OperationType paymentoperation) throws BusinessException;
+	public void checkOperationType(Long id, OperationType paymentoperation) throws BusinessException;
 
 	public void checkOperationType(Transaction transaction, OperationType operation) throws BusinessException;
 
@@ -36,4 +36,7 @@ public interface OperationsService {
 
 	public void initializeOperation(Operation operation);
 
+	// View Support Services 
+
+	// ...
 }

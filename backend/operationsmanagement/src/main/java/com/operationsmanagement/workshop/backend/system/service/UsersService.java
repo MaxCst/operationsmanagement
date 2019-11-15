@@ -10,7 +10,7 @@ import com.operationsmanagement.workshop.backend.system.model.code.RoleType;
 
 public interface UsersService {
 
-	// Users
+	// Users CRUD Services
 
 	public User createUser(User user);
 
@@ -24,7 +24,7 @@ public interface UsersService {
 
 	public List<User> findAllUsers();
 
-	// Roles
+	// Roles CRUD Services
 
 	public Role createRole(Role role);
 
@@ -39,4 +39,8 @@ public interface UsersService {
 	public List<Role> findAllRoles();
 
 	public void checkRole(String user, RoleType allowed) throws BusinessException;
+	
+	// View Support Services 
+
+	// ...
 }

@@ -20,8 +20,6 @@ public interface CategoriesService {
 
 	public void deleteCategory(Long id);
 
-	public List<Category> findAllCategories();
-
 	// Categories Values
 
 	public CategoryValue createCategoryValue(CategoryValue categoryValue);
@@ -34,6 +32,10 @@ public interface CategoriesService {
 
 	public void deleteCategoryValue(Long id);
 
-	public List<CategoryValue> findAllCategoryValues();
+	// View Support Services 
+
+	public List<Category> findAllCategories();
+
+	public List<CategoryValue> findAllCategoryValues();	
 
 }
